@@ -20,7 +20,7 @@ ec2-run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t1.micro --k
                 "Name": "pending"
             },
             "EbsOptimized": false,
-            "LaunchTime": "2013-07-19T02:42:39.000Z",
+            "LaunchTime": "2016-04-08T02:42:39.000Z",
             "ProductCodes": [],
             "InstanceId": "i-5203422c",
             "ImageId": "ami-173d747e",
