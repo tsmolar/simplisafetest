@@ -3,10 +3,24 @@
 # launches a new AMI instance, installs git, php, apache-httpd and the ipaddr.php program.
 # will return the address to connect to this new instance
 
+check-for-aws() {
+  # ensure the aws tool is installed before continuing 
+  which aws >/dev/null 2>&1
+  if [ $? -ne 0 ]; then
+    echo
+    echo "ERROR! 'aws' tool not found in your PATH!"
+    echo "  Please use the install-aws-cli.sh script to install it before running this script"
+    echo
+    exit 1
+  fi
+}
+
 AMI_id="ami-22111148"  # Amazon Linux 03-2016
 keypair="WebAppKeyPair"
 securitygrp="webapp"
 inst_type="t1.micro"
+
+check-for-aws
 
 # launches an aws instance, but could not connect
 aws ec2 run-instances --image-id $AMI_id --count 1 --instance-type $inst_type --key-name $keypair \
