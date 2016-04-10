@@ -8,7 +8,11 @@
 # Ensure our default group (webapp) exists
 aws ec2 create-security-group --group-name webapp --description "Group for Simplisafe test"
 
-# Recreate Key Pair
+# Allow ssh and http access
+aws ec2 authorize-security-group-ingress --group-name $SECURITYGRP --protocol tcp --port 22 --cidr 0.0.0.0/0
+aws ec2 authorize-security-group-ingress --group-name $SECURITYGRP --protocol tcp --port 80 --cidr 0.0.0.0/0
+
+# (Re)create Key Pair
 aws ec2 delete-key-pair --key-name WebAppKeyPair
 aws ec2 create-key-pair --key-name WebAppKeyPair --query 'KeyMaterial' --output text > $HOME/.ssh/id_rsa-webapp
 chmod 600 $HOME/.ssh/id_rsa-webapp
