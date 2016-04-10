@@ -1,8 +1,8 @@
 # simplisafetest
 temp repository for simplisafe
 
-environment set up
-  I have created a script named install-aws-cli.sh that will download and install the amazon cli tool, if needed
+<b>environment set up</b>
+<p>I have created a script named install-aws-cli.sh that will download and install the amazon cli tool, if needed</p>
  
 
 
