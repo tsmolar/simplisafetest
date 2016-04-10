@@ -1,5 +1,4 @@
 # simplisafetest
-temp repository for simplisafe
 
 <b>Local environment set up</b>
 <p>To bootstrap this process, you will need to Amazon aws CLI tool installed on your local system</pr>
