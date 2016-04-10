@@ -8,5 +8,7 @@ temp repository for simplisafe
  <b>Security Preparations</b>
  <p>The script security-prep.sh will create a security group and keypair for use in instance creation, this script only needs to be run once.  If run multiple times, it will delete the previous keypair and recreate it, effectively locking anyone else using a previously generated key.  Be careful</p>
 
+<b>Installing software within new instance</b>
+<p>This install-on-target.sh script will be passed via the --user-data parameter on instance creation and is responsible for installing apache-httpd, php, git, and ipaddr.php on the new instance</p> 
 
 Installed local apache2/php to test myippr.php  can be called at http://localhost/ipaddr.php
