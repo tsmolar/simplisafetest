@@ -4,7 +4,7 @@
 <p>To bootstrap this process, you will need to Amazon aws CLI tool installed on your local system</pr>
 <p>I have created a script named <i>install-aws-cli.sh</i> that will download and install this tool, if needed</p>
 
-<p>after you run this script, prep your environment via the command <i><b>aws configure</b></i>.  This will prompt you for AWS keys and tokens and default region (I did my work in 'us-east-1').  See http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-quick-configuration for more information.</p>
+<p>after you run this script, prep your environment via the command '<i><b>aws configure</b></i>'.  This will prompt you for your Amazon authentication keys and default region (I did my work in 'us-east-1').  See http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-quick-configuration for more information.</p>
 
  
  <b>Security Preparations</b>
