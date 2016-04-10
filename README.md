@@ -9,9 +9,9 @@ temp repository for simplisafe
  <p>The script security-prep.sh will create a security group and keypair for use in instance creation, this script only needs to be run once.  If run multiple times, it will delete the previous keypair and recreate it, effectively locking anyone else using a previously generated key.  Be careful</p>
  
 <b>Launch the Instance</b>
-<p>Once your environment is set up with the command-line tool, and the security steps are complete, you can simply run the <font face=courier>launch-instance.sh</font> script.   This will spin up a new micro instance, install php, apache-httpd, git, and ipaddr.php.   It will report the instance ID and the web address and ssh address to connect to.
+<p>Once your environment is set up with the command-line tool, and the security steps are complete, you can simply run the <font face=courier>launch-instance.sh</font> script.   This will spin up a new micro instance, install php, apache-httpd, git, and ipaddr.php.   It will report the instance ID and the web address and ssh address to connect to.</p>
 
-<b>Installing software within new instance</b>
-<p>This install-on-target.sh script will be passed via the --user-data parameter on instance creation and is responsible for installing apache-httpd, php, git, and ipaddr.php on the new instance</p> 
+<p>That's all there is to it!</p>
 
-Installed local apache2/php to test myippr.php  can be called at http://localhost/ipaddr.php
+<b>Other scripts</b>
+<p><font face=courier>launch-on-target.sh</font> is used by launch-instance to pass to the new instance via the --user-data parameter.  This will prep the environment and does not need to be run by the user.</p> 
