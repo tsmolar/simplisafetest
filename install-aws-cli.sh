@@ -14,6 +14,16 @@ echo ""
 echo ""
 echo ""
 echo ""
+
+if [ -d /usr/local/aws ]; then
+  echo "There appears to already be an aws installation in /usr/local/aws, do you wish to proceed? (y/N)"
+  read x
+  if [ "$(echo $x | tr [a-z] [A-Z])" != "Y" ]; then
+    exit
+  fi
+  echo ""
+fi
+
 echo "Are you sure you want to install aws tools? (y/N)"
 read x
 
